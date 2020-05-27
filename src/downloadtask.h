@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Tor Download Manager (TDM) is an internet download manager that sends *
+ *   T Download Manager (TDM) is an internet download manager that sends   *
  *   all its traffic through the TOR network.                              *
  *                                                                         *
  *   Copyright (C) 2020 Darien Alonso Camacho                              *

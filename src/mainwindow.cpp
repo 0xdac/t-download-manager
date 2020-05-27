@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Tor Download Manager (TDM) is an internet download manager that sends *
+ *   T Download Manager (TDM) is an internet download manager that sends   *
  *   all its traffic through the TOR network.                              *
  *                                                                         *
  *   Copyright (C) 2020 Darien Alonso Camacho                              *
@@ -111,7 +111,7 @@ MainWindow::MainWindow(QWidget *parent)
             this, SLOT(removeDownloadTask()));
 
     // Load settings and start
-    setWindowTitle(tr("Tor Download Manager"));
+    setWindowTitle(tr("T Download Manager"));
     setActionsEnabled();
     //QMetaObject::invokeMethod(this, "loadSettings", Qt::QueuedConnection);
     QMetaObject::invokeMethod(this, "usingTORProxy", Qt::QueuedConnection);
@@ -143,7 +143,7 @@ QSize MainWindow::sizeHint() const
 void MainWindow::loadSettings()
 {
     // Load base settings (last working directory, upload/download limits).
-    QSettings settings("TorDownloadManager", "List");
+    QSettings settings("TDownloadManager", "List");
     lastDirectory = settings.value("LastDirectory").toString();
     if (lastDirectory.isEmpty())
         lastDirectory = QDir::currentPath();
@@ -222,7 +222,7 @@ bool MainWindow::addUrl(const QString &url, const QString &destinationFolder)
 void MainWindow::saveSettings()
 {
     // Prepare and reset the settings
-    QSettings settings("TorDownloadManager", "List");
+    QSettings settings("TDownloadManager", "List");
     settings.clear();
 
     settings.setValue("LastDirectory", lastDirectory);
@@ -258,8 +258,8 @@ void MainWindow::about()
 
     QLabel *text = new QLabel;
     text->setWordWrap(true);
-    QString aboutText = QString("<h3>Tor Download Manager %1.%2.%3</h3>"
-                    "<p><b>Tor Download Manager</b> is an internet download manager "
+    QString aboutText = QString("<h3>T Download Manager %1.%2.%3</h3>"
+                    "<p><b>T Download Manager</b> is an internet download manager "
                     "that sends all its traffic "
                     "through the TOR network. </p>"
                     "<p>Copyright (C) 2020 Darien Alonso</p>")
@@ -285,7 +285,7 @@ void MainWindow::about()
 
     QDialog about(this);
     about.setModal(true);
-    about.setWindowTitle(tr("About Tor Download Manager"));
+    about.setWindowTitle(tr("About T Download Manager"));
     about.setLayout(mainLayout);
 
     connect(quitButton, SIGNAL(clicked()), &about, SLOT(close()));
