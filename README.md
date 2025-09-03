@@ -1,5 +1,6 @@
 # T Download Manager
 An internet download manager that sends all its traffic through the TOR network
+If you want to show interest, report a bug, ask for help or even ask for custom development services feel free to contact me about this project at contact@0xdac.slmail.me
 
 [Homepage](https://0xdac.org/t-download-manager.html)
 
